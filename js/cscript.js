@@ -13,7 +13,7 @@ jQuery(function($) {
 		var email_regex 	= /^[\w%_\-.\d]+@[\w.\-]+.[A-Za-z]{2,6}$/;
 		var phone 			= $("form#form1 input[name='phone']").val();
 		var phone_regex		= /^\d{10}$/; // reg ex phone check	
-		var message 		= $("form#form1 input[name='text']").val();
+		var message 		= $("form#form1 textarea[name='text']").val();
         	var msg_from 		= $("form#form1 input[name='msg_from']").val();
 			
 		/* validation start */	
