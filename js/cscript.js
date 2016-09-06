@@ -74,7 +74,7 @@ jQuery(function($) {
                     url: "email.php",
                     data: "name=" + name + "&email=" + email + "&message=" + message + "&phone=" + phone + "&msg_from=" + msg_from ,
                     success : function(data){
-                        //alert(data);
+                        alert(data);
                         if(data == "success")
                             {
                                 $('#form1').fadeTo( "slow", 0.15, function() {
