@@ -22,7 +22,7 @@
                         
                         <div id="form-div">
                             <span>Field marked with * are mandatory</span>
-                            <form class="form" id="form1" method="post">
+                            <form class="form" id="form1" method="GET" action="server/php/">
                                 <p class="name">
                                 <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="* Name" id="name" required /><span class="val_fname"></span>
                                 </p>
