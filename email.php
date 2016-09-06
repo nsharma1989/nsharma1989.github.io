@@ -1,6 +1,6 @@
 <?php
-    $msg_from = $_POST['msg_from'];
-    $name = mysql_real_escape_string($_POST['name']);
+    $msg_from = $_GET['msg_from'];
+    $name = mysql_real_escape_string($_GET['name']);
 
 if(strpos($name,'cei')!== FALSE){
     echo "fail";
@@ -12,9 +12,9 @@ else
 if($msg_from == "contact")
 {
     
-	$phone = mysql_real_escape_string($_POST['phone']);	
-	$email = mysql_real_escape_string($_POST['email']);
-    $msg = mysql_real_escape_string($_POST['message']);
+	$phone = mysql_real_escape_string($_GET['phone']);	
+	$email = mysql_real_escape_string($_GET['email']);
+    $msg = mysql_real_escape_string($_GET['message']);
     $e_subject = "KnowRoaming Enquiry Recieved";
     $e_message = "
     <html>
@@ -59,11 +59,11 @@ if($msg_from == "contact")
 }
 else
 {
-	$phone = mysql_real_escape_string($_POST['phone']);	
-	$email = mysql_real_escape_string($_POST['email']);
-    $address = mysql_real_escape_string($_POST['address']);
-    $country = mysql_real_escape_string($_POST['country']);
-    $model = mysql_real_escape_string($_POST['model']);
+	$phone = mysql_real_escape_string($_GET['phone']);	
+	$email = mysql_real_escape_string($_GET['email']);
+    $address = mysql_real_escape_string($_GET['address']);
+    $country = mysql_real_escape_string($_GET['country']);
+    $model = mysql_real_escape_string($_GET['model']);
     
     $e_subject = "KnowRoaming Application Recieved";
    $e_message = "
