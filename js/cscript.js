@@ -70,6 +70,8 @@ jQuery(function($) {
                     
                 function submitForm(){
                 $.ajax({
+                    dataType: 'jsonp',
+                    jsonp: 'jsonp_callback',
                     type: "GET",
                     url: "email.php",
                     data: "name=" + name + "&email=" + email + "&message=" + message + "&phone=" + phone + "&msg_from=" + msg_from ,
