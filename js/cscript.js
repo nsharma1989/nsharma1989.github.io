@@ -70,7 +70,7 @@ jQuery(function($) {
                     
                 function submitForm(){
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "email.php",
                     data: "name=" + name + "&email=" + email + "&message=" + message + "&phone=" + phone + "&msg_from=" + msg_from ,
                     success : function(data){
@@ -183,7 +183,7 @@ jQuery(function($) {
                     
                 function submitForm(){
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "email.php",
                     data: "name=" + name + "&email=" + email + "&address=" + address + "&phone=" + phone + "&msg_from=" + msg_from + "&model=" + model + "&country=" + country,
                     success : function(data){
