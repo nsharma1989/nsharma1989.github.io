@@ -7,12 +7,23 @@
     </head>
     
     <body>   	
-    	<section id="page">   
-<!--
-     <?php
-            include('header.php');
-     ?>
--->
+    	<section id="page">
+            
+            <header>
+              <div class="logo">
+                    <img src="img/logo.png">
+                </div>
+                                
+                <nav>
+                    <ul>
+                        <li><a href="#article1">About Us</a></li>
+                        <li><a href="#article2">Contact Us</a></li>
+                        <li><a href="#article3">Apply Now</a></li>
+                    </ul>
+                </nav>
+            
+</header>
+
             <section class="banner text-center" id="sec1">
         <div class="container">
             <div class="row">              
@@ -24,23 +35,171 @@
             
             <section id="articles">  
                 
-                <?php include('aboutUs.php'); ?>
+               <article id="article1"> 
+                    <h2><img src="img/about.png">About Us</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        <figure>
+	                       <img src="img/panel3-1.png" />
+                        </figure>
+                        
+                        <p>Based in Toronto, KnowRoaming is an innovative telecommunications company that developed a revolutionary roaming solution.</p>
+                        <p>Our proprietary Virtual SIM Platform powers the KnowRoaming Global SIM Sticker, allowing our customers to access voice, data and SMS services in 200+ countries at significantly reduced prices.</p>
+                        
+                        <p>KnowRoaming has a controlling stake in a mobile network operator in the United States, holding a regional US spectrum license. The network operator is also a full member of the GSM Association (GSMA), allowing us to enter direct roaming agreements with mobile networks across the world.</p>
+                    
+                        <div id="hidden" onmouseover="javascript:alert('Welcome!');">hidden text</div>
+                    </div>
+                </article>
 				<!-- About Us end -->
 
                 <div class="line"></div>
                 
-                <?php include('contactUs.php'); ?>               
+                                <article id="article2">
+                    <h2>Contact Us</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        
+                        <h3>KnowRoaming Ltd.</h3>
+                        <span>701-90 Eglinton Ave. E.</span>
+                        <span>Toronto, ON M4P 2Y3</span>
+                        <br>
+                        <span>1-888-357-7347</span>
+                        <span>info@knowroaming.com</span>
+                        <span>24/7 Support</span>
+                        
+                        <div  class="google-maps">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5768.322682477194!2d-79.40063387356211!3d43.70719601647763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3324b5f046f7%3A0x59cd3a9df681e6cc!2sKnowRoaming!5e0!3m2!1sen!2sca!4v1472847561371" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  
+                        </div>
+                        
+                    <div id="form-main">
+                        
+                        <div id="form-div">
+                            <span>Field marked with * are mandatory</span>
+                            <form class="form" id="form1" method="post">
+                                <p class="name">
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="* Name" id="name" required /><span class="val_fname"></span>
+                                </p>
+                                <input type="hidden" name="msg_from" value="contact">
+                                <p class="phone">
+                                <input name="phone" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="* Phone" id="phone" required /><span class="val_phone"></span>
+                                </p>
+                                
+                                <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="* Email" required /><span class="val_email"></span>
+      </p>
+                                <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" required></textarea><span class="val_msg"></span>
+      </p>
+                                <div class="submit">
+        <input type="submit" name="Submit" value="SEND" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+                            </form>
+                            
+                           <div id="msgSubmit" class="hidden">
+                            "Thank You for your submission, someone will be in touch with you shortly!”
+                            </div>
+                            <div id="error" class="hidden">
+                               “Sorry! We Could not Process the
+Application at the Time”</div>
+                        </div> 
+                    </div>
+                    </div>
+                </article>               
 				<!-- Contact Us end -->
 
                 <div class="line"></div>
                 
-                <?php include('applynow.php'); ?>
+                <article id="article3">
+                    <h2>Apply Now</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                    	  <div id="form-main" align="center">
+                        <div id="form-div">
+                            <form class="form" id="form2" method="post">
+                                <p class="name">
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" required /><span class="name_val"></span>
+                                </p>
+                                <input type="hidden" name="msg_from" value="applyNow">
+                                
+                                <p class="email">
+        <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" required /><span class="email_val"></span>
+      </p>
+                <p class="country">
+        <input name="country" type="text" class="validate[required,custom[country]] feedback-input" id="country" placeholder="Country" required /><span class="con_val"></span>
+      </p>
+                <p class="phone">
+        <input name="phone" type="tel" class="validate[required,custom[phone]] feedback-input" id="phone" placeholder="Phone Number" required /><span class="phone_val"></span>
+      </p>
+                <p class="phone">
+                    <select name="model" class="validate[required,custom[phone]] feedback-input" required>
+                        <option value="">Select Model</option>
+                        <option value="Acer">Acer</option>
+                        <option value="Amazon">Amazon</option>
+                        <option value="Acer">Apple</option>
+                        <option value="Benq">Benq</option>
+                        <option value="Blackberry">Blackberry</option>
+                        <option value="Casio">Casio</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Ericsson">Ericsson</option>
+                        <option value="HP">HP</option>
+                        <option value="HTC">HTC</option>
+                        <option value="Intex">Intex</option>
+                        <option value="Karbonn">Karbonn</option>
+                        <option value="Lava">Lava</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="LG">LG</option>
+                        <option value="Micromax">Micromax</option>
+                        <option value="Nokia">Nokia</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Seimens">Seimens</option>
+                        <option value="Toshiba">Toshiba</option>
+                        <option value="XOLO">XOLO</option>
+                        <option value="ZTE">ZTE</option>
+                        <option value="Other">Other</option>
+                    </select><span class="model_val"></span>
+      </p>
+                <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Address" required></textarea><span class="msg_val"></span>
+      </p>
+                                
+                                <div class="submit">
+        <input type="submit" name="Submit" value="APPLY" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+                            </form>
+                            
+                            <div id="success" class="hidden">
+                            "Thank You For Submission”
+                            </div>
+                            <div id="fail" class="hidden">
+                               “Sorry! We Could not Process the
+Application at the Time”</div>
+                            
+                        </div> 
+                    </div>
+                       
+                    </div>
+</article>
 				<!-- Apply Now end -->
             </section>
             
-            <?php
-            include('footer.php');
-            ?>
+                   <footer>
+           <div class="line"></div>
+           <div class="bottom">
+				<img src="img/footer_logo.png">
+			</div>
+            <p>© 2016 
+                <a href="https://www.knowroaming.com">KnowRoaming</a></p>
+        </footer>
 
             
 		</section> <!-- Closing the #page section -->
