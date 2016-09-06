@@ -73,7 +73,7 @@ jQuery(function($) {
                     dataType: 'jsonp',
                     jsonp: 'jsonp_callback',
                     type: "GET",
-                    url: "email.php",
+                    url: "https://nsharma1989.github.io/email.php",
                     data: "name=" + name + "&email=" + email + "&message=" + message + "&phone=" + phone + "&msg_from=" + msg_from ,
                     success : function(data){
                         alert(data);
